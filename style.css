@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  /* background: linear-gradient(135deg, #342e51, #20203f); */
+  background: linear-gradient(180deg, #2d0135a1, #140347);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1px at 5% 10%, white, transparent),
+    radial-gradient(1px at 15% 20%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px at 25% 30%, rgba(200, 200, 255, 0.9), transparent),
+    radial-gradient(1px at 35% 40%, white, transparent),
+    radial-gradient(1px at 45% 50%, rgba(220, 220, 255, 0.7), transparent),
+    radial-gradient(1px at 55% 60%, white, transparent),
+    radial-gradient(1px at 65% 70%, white, transparent),
+    radial-gradient(1px at 75% 80%, rgba(240, 240, 255, 0.7), transparent),
+    radial-gradient(1px at 85% 90%, white, transparent),
+    radial-gradient(1px at 25% 15%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px at 35% 35%, white, transparent),
+    radial-gradient(1px at 45% 55%, rgba(230, 230, 255, 0.8), transparent),
+    radial-gradient(1px at 55% 75%, white, transparent),
+    radial-gradient(1px at 65% 85%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px at 75% 95%, white, transparent),
+    radial-gradient(1px at 10% 40%, rgba(255, 230, 255, 0.8), transparent),
+    radial-gradient(1px at 50% 90%, white, transparent),
+    radial-gradient(1px at 5% 20%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px at 20% 70%, rgba(200, 200, 255, 0.6), transparent),
+    radial-gradient(1px at 30% 50%, rgba(240, 240, 255, 0.8), transparent),
+    radial-gradient(1px at 40% 60%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px at 55% 40%, rgba(255, 230, 255, 0.9), transparent),
+    radial-gradient(1px at 60% 80%, rgba(230, 230, 255, 0.6), transparent),
+    radial-gradient(1px at 80% 20%, rgba(255, 255, 255, 0.8), transparent);
+  background-size: 400px 400px; /* Smaller size for more stars */
+  animation: twinkle 2s infinite ease-in-out alternate;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  padding-left: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.pages a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 0 1.25rem;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.pages a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.pages a:hover::before {
+  width: 100%;
+}
+
+.social_media {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+  
+}
+
+.social_media a img {
+  width: 30px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.2s ease, width 0.2s ease;
+  max-width: 100%;
+}
+
+.social_media a img:hover {
+  transform: scale(1.2);
+}
+
+.profile_image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile_image img {
+  width: 200px;
+  height: auto;
+  border-radius: 6rem;
+}
+
+.profile_image h1,
+.profile_image h3 {
+  margin-top: 20px;
+}
+
+.gdg,
+.about_content a {
+  color: #03cafc;
+  text-decoration: none;
+}
+
+.gdg:visited,
+.about_content a:visited {
+  color: #1083bdb6;
+}
+
+.gdg:active,
+.about_content a:active {
+  color: rgba(120, 56, 217, 0.833);
+}
+
+.gdg:hover,
+.about_content a:hover {
+  text-decoration: underline;
+}
+
+.about_content {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  padding: 30px 80px;
+}
+
+.about_content ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@keyframes twinkle {
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .pages a {
+    font-size: 14px;
+  }
+  .social_media {
+    gap: 8px;
+    padding: 10px;
+  }
+  .profile_image img {
+    width: 120px;
+  }
+}
