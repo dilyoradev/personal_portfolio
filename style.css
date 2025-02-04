@@ -184,6 +184,10 @@ h2 {
   padding-bottom: 20px;
 }
 
+p {
+  font-family: "Verdana", sans-serif;
+}
+
 @keyframes twinkle {
   90% {
     opacity: 0.5;
