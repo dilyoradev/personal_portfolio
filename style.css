@@ -2,6 +2,7 @@
 body,
 html {
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -10,20 +11,21 @@ html {
 body {
   height: 100vh;
   padding: 0;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: white;
   /* background: linear-gradient(135deg, #342e51, #20203f); */
   background: linear-gradient(180deg, #2d0135a1, #140347);
-  overflow: auto;
+  overflow-y: auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -171,12 +173,19 @@ body::before {
   margin-top: 100px;
   margin-bottom: 10px;
   padding: 30px 80px;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about_content ul li {
   list-style-type: none;
   margin-bottom: 10px;
   margin-top: 10px;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto; /
 }
 
 h2 {
@@ -214,4 +223,9 @@ p {
   .profile_image img {
     width: 120px;
   }
+  .about_content {
+    padding: 15px; 
+    max-height: calc(100vh - 150px);
+  }
+
 }
