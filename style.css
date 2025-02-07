@@ -1,22 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 body,
 html {
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   height: 100vh;
   padding: 0;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: white;
   /* background: linear-gradient(135deg, #342e51, #20203f); */
   background: linear-gradient(180deg, #2d0135a1, #140347);
-  overflow: hidden;
+  overflow: auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -132,7 +134,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .profile_image img {
