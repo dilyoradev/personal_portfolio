@@ -229,6 +229,79 @@ body::before {
   color: white;
 }
 
+/* Projects Section */
+#projects {
+  padding: 100px 20px 50px; /* Adjusted for fixed header */
+  background: linear-gradient(180deg, #2d0135a1, #140347);
+  color: white;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projects p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px; /* Fixed height for all cards */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allow description to grow and fill space */
+  overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #03cafc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: auto; /* Push button to the bottom */
+}
+
+.project-card .btn:hover {
+  background: #029ec7;
+}
 /* Achievements Section */
 #achievements {
   padding: 100px 20px 50px; /* Adjusted for fixed header */
@@ -314,6 +387,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
+  
   .header {
     padding: 1rem;
   }
@@ -335,15 +409,36 @@ body::before {
     padding: 15px; 
     /* max-height: calc(100vh - 150px); */
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+  }
+  
+  #projects p {
+    font-size: 1rem;
+  }
+  .project-card {
+    height: auto; /* Allow cards to grow based on content */
+    min-height: 250px; /* Set a minimum height */
+}
+
+  .project-card p {
+    overflow-y: visible; /* Disable scrolling on mobile */
+}
   .certificates-grid {
     grid-template-columns: 1fr;
 }
 
-#achievements h2 {
+
+  #achievements h2 {
     font-size: 2rem;
 }
 
-#achievements p {
+  #achievements p {
     font-size: 1rem;
 }
 
