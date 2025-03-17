@@ -296,7 +296,7 @@ body::before {
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease;
-  margin-top: auto; /* Push button to the bottom */
+  margin-top: auto;
 }
 
 .project-card .btn:hover {
@@ -386,60 +386,52 @@ body::before {
   }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  
   .header {
     padding: 1rem;
   }
+
   .logo {
     font-size: 1.5rem;
   }
+
   .pages a {
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0 0.75rem;
   }
-  .social_media {
-    gap: 8px;
-    /* padding: 10px; */
-  }
-  .profile_image img {
-    width: 150px;
-  }
-  .about_content {
-    padding: 15px; 
-    /* max-height: calc(100vh - 150px); */
+
+  .social_media a img {
+    width: 20px;
+    height: 20px;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .profile_image img {
+    width: 120px;
+    height: 120px;
   }
-  
-  #projects h2 {
-    font-size: 2rem;
+
+  .profile_image h1 {
+    font-size: 1.75rem;
   }
-  
-  #projects p {
+
+  .profile_image h3 {
     font-size: 1rem;
   }
-  .project-card {
-    height: auto; /* Allow cards to grow based on content */
-    min-height: 250px; /* Set a minimum height */
-}
 
-  .project-card p {
-    overflow-y: visible; /* Disable scrolling on mobile */
-}
+  .projects-grid,
   .certificates-grid {
     grid-template-columns: 1fr;
-}
+  }
 
+  .project-card,
+  .certificate-card {
+    height: auto;
+    min-height: 250px;
+  }
 
-  #achievements h2 {
-    font-size: 2rem;
-}
-
-  #achievements p {
-    font-size: 1rem;
-}
-
+  .project-card p,
+  .certificate-card p {
+    overflow-y: visible;
+  }
 }
