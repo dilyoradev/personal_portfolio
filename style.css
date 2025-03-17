@@ -25,9 +25,9 @@ body {
   background: linear-gradient(180deg, #2d0135a1, #140347);
   /* overflow-y: auto; */
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
-
+  min-height: 100vh;
 }
 
 body::before {
@@ -228,8 +228,14 @@ h2, p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px; /* Fixed height for all cards */
-  overflow: hidden; /* Prevent content from overflowing */
+  height: auto;
+  min-height: 250px;
+  overflow: hidden; 
+}
+
+.project-card p {
+  overflow-y: auto; 
+  max-height: 100px;
 }
 
 .project-card:hover {
