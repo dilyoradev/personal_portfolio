@@ -17,6 +17,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -38,42 +40,42 @@ body::before {
   width: 100%;
   height: 100%;
   background: radial-gradient(1px at 5% 10%, white, transparent),
-    radial-gradient(2px at 15% 20%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(2px at 25% 30%, rgba(200, 200, 255, 0.9), transparent),
-    radial-gradient(2px at 35% 40%, white, transparent),
-    radial-gradient(2px at 45% 50%, rgba(220, 220, 255, 0.7), transparent),
-    radial-gradient(2px at 55% 60%, white, transparent),
-    radial-gradient(2px at 65% 70%, white, transparent),
-    radial-gradient(2px at 75% 80%, rgba(240, 240, 255, 0.7), transparent),
-    radial-gradient(2px at 85% 90%, white, transparent),
-    radial-gradient(2px at 25% 15%, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(2px at 35% 35%, white, transparent),
-    radial-gradient(2px at 45% 55%, rgba(230, 230, 255, 0.8), transparent),
-    radial-gradient(2px at 55% 75%, white, transparent),
-    radial-gradient(2px at 65% 85%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(2px at 75% 95%, white, transparent),
-    radial-gradient(2px at 10% 40%, rgba(255, 230, 255, 0.8), transparent),
-    radial-gradient(2px at 50% 90%, white, transparent),
-    radial-gradient(2px at 5% 20%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(2px at 20% 70%, rgba(200, 200, 255, 0.6), transparent),
-    radial-gradient(2px at 30% 50%, rgba(240, 240, 255, 0.8), transparent),
-    radial-gradient(2px at 40% 60%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(2px at 55% 40%, rgba(255, 230, 255, 0.9), transparent),
-    radial-gradient(2px at 60% 80%, rgba(230, 230, 255, 0.6), transparent),
-    radial-gradient(2px at 80% 20%, rgba(255, 255, 255, 0.8), transparent);
-  background-size: 400px 400px; /* Smaller size for more stars */
+    radial-gradient(1px at 15% 20%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px at 25% 30%, rgba(200, 200, 255, 0.9), transparent),
+    radial-gradient(1px at 35% 40%, white, transparent),
+    radial-gradient(1px at 45% 50%, rgba(220, 220, 255, 0.7), transparent),
+    radial-gradient(1px at 55% 60%, white, transparent),
+    radial-gradient(1px at 65% 70%, white, transparent),
+    radial-gradient(1px at 75% 80%, rgba(240, 240, 255, 0.7), transparent),
+    radial-gradient(1px at 85% 90%, white, transparent),
+    radial-gradient(1px at 25% 15%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px at 35% 35%, white, transparent),
+    radial-gradient(1px at 45% 55%, rgba(230, 230, 255, 0.8), transparent),
+    radial-gradient(1px at 55% 75%, white, transparent),
+    radial-gradient(1px at 65% 85%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px at 75% 95%, white, transparent),
+    radial-gradient(1px at 10% 40%, rgba(255, 230, 255, 0.8), transparent),
+    radial-gradient(1px at 50% 90%, white, transparent),
+    radial-gradient(1px at 5% 20%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px at 20% 70%, rgba(200, 200, 255, 0.6), transparent),
+    radial-gradient(1px at 30% 50%, rgba(240, 240, 255, 0.8), transparent),
+    radial-gradient(1px at 40% 60%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px at 55% 40%, rgba(255, 230, 255, 0.9), transparent),
+    radial-gradient(1px at 60% 80%, rgba(230, 230, 255, 0.6), transparent),
+    radial-gradient(1px at 80% 20%, rgba(255, 255, 255, 0.8), transparent);
+  background-size: 400px 400px;
   animation: twinkle 2s infinite ease-in-out alternate;
   z-index: -1;
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 1rem 4rem;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Blur effect for modern browsers */
@@ -88,6 +90,7 @@ body::before {
   font-weight: 700;
   transition: transform 0.3s ease;
 }
+
 .logo:hover {
   transform: translateY(-3px) scale(1.05);
 }
@@ -119,19 +122,14 @@ body::before {
 
 .social_media {
   display: flex;
-  /* justify-content: flex-end; */
   gap: 10px;
-  /* padding: 20px; */
   
 }
 
 .social_media a img {
   width: 24px;
   height: 24px;
-  /* object-fit: cover; */
   transition: transform 0.2s ease
-   /* width 0.2s ease;
-  max-width: 100%; */
 }
 
 .social_media a img:hover {
@@ -165,7 +163,8 @@ body::before {
 }
 
 .gdg,
-.about_content a {
+.about_content a,
+footer a {
   color: #03cafc;
   text-decoration: none;
 }
@@ -175,10 +174,6 @@ body::before {
   color: #1083bdb6;
 } 
 
-/* .gdg:active,
-.about_content a:active {
-  color: rgba(120, 56, 217, 0.833);
-} */
 
 .gdg:hover,
 .about_content a:hover {
@@ -201,38 +196,18 @@ h2, p {
   text-align: center;
 }
 
-#about,
-#projects,
-#achievements {
+#about {
   background: linear-gradient(180deg, #2d0135a1, #140347);
 }
 
-#projects p {
-  padding-bottom: 15px;
-}
-
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
+footer {
+  display:flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
-  min-height: 250px;
-  overflow: hidden; 
-}
+  padding: 15px;
+  margin: 20px;
 
+<<<<<<< HEAD
 .project-card p {
   overflow-y: auto; 
   max-height: 100px;
@@ -324,6 +299,8 @@ h2, p {
 
 .certificate-card .btn:hover {
   background: #029ec7;
+=======
+>>>>>>> 0b6a909 (Made changes to the layout of the website including removing project and achievements part of the website and renewing profile picture and account links)
 }
 
 
@@ -370,19 +347,4 @@ h2, p {
     font-size: 1rem;
   }
 
-  .projects-grid,
-  .certificates-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card,
-  .certificate-card {
-    height: auto;
-    min-height: 250px;
-  }
-
-  .project-card p,
-  .certificate-card p {
-    overflow-y: visible;
-  }
 }
