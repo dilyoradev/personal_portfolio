@@ -64,7 +64,7 @@ body::before {
     radial-gradient(1px at 60% 80%, rgba(230, 230, 255, 0.6), transparent),
     radial-gradient(1px at 80% 20%, rgba(255, 255, 255, 0.8), transparent);
   background-size: 400px 400px;
-  animation: twinkle 2s infinite ease-in-out alternate;
+  animation: twinkle 1s infinite ease-in-out alternate;
   z-index: -1;
 }
 
@@ -181,8 +181,8 @@ footer a {
 }
 
 /* About Section */
-#about {
-  padding: 100px 20px 50px; /* Adjusted for fixed header */
+.about_content {
+  padding: 10px 20px 50px; /* Adjusted for fixed header */
   color: white;
 }
 
@@ -190,14 +190,10 @@ h2, p {
   text-align: center;
   padding-bottom: 10px;
 }
-/* Sections */
+
 .section {
   padding: 100px 20px;
   text-align: center;
-}
-
-#about {
-  background: linear-gradient(180deg, #2d0135a1, #140347);
 }
 
 footer {
