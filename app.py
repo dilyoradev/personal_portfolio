@@ -59,13 +59,15 @@ def admin_login():
         return "You are now authenticated"
 
 
-@app.route("blog")
+@app.route("/blog")
 def blog():
     return render_template("blog.html", articles=articles)
 
 
 @app.route("/article/<slug>")
 def article(slug: str):
+    if slug not in articles:
+        return "Article not found", 404
     article = articles[slug]
     return render_template("article.html", article=article)
 
