@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dilyora</title>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
@@ -30,16 +30,18 @@
         </div>
     </header>
 
+    <main>
+
     {% block body %}{% endblock %}
 
+    </main>
     <footer>
         <p>&copy; 2025 Dilyora. All rights reserved.</p>
         <p>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/dilyorakhon-akramjonova-b6a449219/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/dilyoradev" target="_blank">GitHub</a>
         </p>
     </footer>
-
      
 </body>
 

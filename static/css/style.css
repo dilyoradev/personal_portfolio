@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-height: 72px; /* adjust once, used everywhere */
+}
+
 body,
 html {
   height: 100%;
@@ -69,19 +73,30 @@ body::before {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 4rem;
+  height: var(--header-height);
+  padding: 0 4rem; /* vertical padding removed */
+  display: flex;
   align-items: center;
-  background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Blur effect for modern browsers */
+  justify-content: space-between;
+  background: rgba(51, 51, 51, 0.8);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
+.page_container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: var(--header-height);
+  min-height: 100vh;
+
+  margin: 0;
+}
 .logo {
   /* padding-left: 10px; */
   color: white;
@@ -94,6 +109,7 @@ body::before {
 .logo:hover {
   transform: translateY(-3px) scale(1.05);
 }
+
 
 .pages a {
   position: relative;
@@ -186,15 +202,18 @@ footer a {
   color: white;
 }
 
+
 h2, p {
   text-align: center;
   padding-bottom: 10px;
 }
 
 .section {
-  padding: 100px 20px;
-  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  width: 100%;
 }
+
 
 footer {
   display:flex;
