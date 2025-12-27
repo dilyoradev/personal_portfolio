@@ -20,7 +20,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
+  min-height: 100dvh; 
+  position: relative;
+  z-index: 0;   
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
