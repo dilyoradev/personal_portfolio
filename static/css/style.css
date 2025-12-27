@@ -36,8 +36,10 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: white; 
-
-  background: linear-gradient(180deg, #2d0135a1, #140347);
+    /* fallback for older Safari */
+  background: linear-gradient(180deg, rgb(45, 1, 53), rgb(20, 3, 71));
+  /* preferred (with alpha) */
+  background: linear-gradient(180deg, rgba(45, 1, 53, 0.63), rgb(20, 3, 71));
   background-repeat: no-repeat;
 }
 
