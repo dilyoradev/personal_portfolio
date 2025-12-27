@@ -43,10 +43,10 @@ body {
   background-repeat: no-repeat;
 }
 
-body::before {
+/* body::before {
   content: "";
-  position: fixed;   /* key change */
-  inset: 0;          /* key change */
+  position: fixed;   
+  inset: 0;          
   pointer-events: none;
 
   background: radial-gradient(1px at 5% 10%, white, transparent),
@@ -62,8 +62,8 @@ body::before {
   background-size: 400px 400px;
   animation: twinkle 2s infinite ease-in-out alternate;
 
-  z-index: -1;       /* works because body has z-index: 0 */
-}
+  z-index: -1;
+} */
 
 .header {
   position: fixed;
