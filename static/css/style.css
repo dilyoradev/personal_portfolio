@@ -25,31 +25,28 @@ html {
 }
 
 body {
-  min-height: 100dvh; 
+  min-height: 100dvh;
   position: relative;
-  z-index: 0;   
+  z-index: 0;
+
   display: flex;
   flex-direction: column;
+
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: white;
-  /* background: linear-gradient(135deg, #342e51, #20203f); */
+  color: white; 
+
   background: linear-gradient(180deg, #2d0135a1, #140347);
-  /* overflow-y: auto; */
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  position: relative;
-  min-height: 100vh;
 }
 
 body::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;   /* key change */
+  inset: 0;          /* key change */
+  pointer-events: none;
+
   background: radial-gradient(1px at 5% 10%, white, transparent),
     radial-gradient(1px at 15% 20%, rgba(255, 255, 255, 0.8), transparent),
     radial-gradient(1px at 25% 30%, rgba(200, 200, 255, 0.9), transparent),
@@ -58,25 +55,12 @@ body::before {
     radial-gradient(1px at 55% 60%, white, transparent),
     radial-gradient(1px at 65% 70%, white, transparent),
     radial-gradient(1px at 75% 80%, rgba(240, 240, 255, 0.7), transparent),
-    radial-gradient(1px at 85% 90%, white, transparent),
-    radial-gradient(1px at 25% 15%, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(1px at 35% 35%, white, transparent),
-    radial-gradient(1px at 45% 55%, rgba(230, 230, 255, 0.8), transparent),
-    radial-gradient(1px at 55% 75%, white, transparent),
-    radial-gradient(1px at 65% 85%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(1px at 75% 95%, white, transparent),
-    radial-gradient(1px at 10% 40%, rgba(255, 230, 255, 0.8), transparent),
-    radial-gradient(1px at 50% 90%, white, transparent),
-    radial-gradient(1px at 5% 20%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(1px at 20% 70%, rgba(200, 200, 255, 0.6), transparent),
-    radial-gradient(1px at 30% 50%, rgba(240, 240, 255, 0.8), transparent),
-    radial-gradient(1px at 40% 60%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(1px at 55% 40%, rgba(255, 230, 255, 0.9), transparent),
-    radial-gradient(1px at 60% 80%, rgba(230, 230, 255, 0.6), transparent),
-    radial-gradient(1px at 80% 20%, rgba(255, 255, 255, 0.8), transparent);
+    radial-gradient(1px at 85% 90%, white, transparent);
+
   background-size: 400px 400px;
-  animation: twinkle 1s infinite ease-in-out alternate;
-  z-index: -1;
+  animation: twinkle 2s infinite ease-in-out alternate;
+
+  z-index: -1;       /* works because body has z-index: 0 */
 }
 
 .header {
@@ -240,37 +224,19 @@ footer {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
   .header {
-    padding: 1rem;
+    padding: 0 1rem; /* only horizontal padding */
   }
 
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .pages a {
-    font-size: 0.875rem;
-    padding: 0 0.75rem;
-  }
-
-  .social_media a img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .profile_image img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .profile_image h1 {
-    font-size: 1.75rem;
-  }
-
-  .profile_image h3 {
-    font-size: 1rem;
-  }
-
+  .logo { font-size: 1.5rem; }
+  .pages a { font-size: 0.875rem; padding: 0 0.75rem; }
+  .social_media a img { width: 20px; height: 20px; }
+  .profile_image img { width: 120px; height: 120px; }
+  .profile_image h1 { font-size: 1.75rem; }
+  .profile_image h3 { font-size: 1rem; }
 }
